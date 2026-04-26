@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-container">
+    <div class="login-box">
+        <h1>🍽 Restaurant System</h1>
+        <p>Welcome! Please login to continue</p>
+
+        <!-- Floating Inputs -->
+        <div class="input-group">
+            <input type="text" id="name" required>
+            <label>Name</label>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="phone" required>
+            <label>Phone</label>
+        </div>
+
+        <!-- Role -->
+        <select id="role">
+            <option value="customer">Customer</option>
+            <option value="worker">Worker</option>
+        </select>
+
+        <!-- Button -->
+        <button id="loginBtn" onclick="login()">Login</button>
+
+        <!-- Error -->
+        <p id="error" class="error"></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<script>
+document.getElementById("role").addEventListener("change", function() {
+    let role = this.value;
+
+    if (role === "worker") {
+        window.location.href = "/worker-login";
+    }
+});
+</script>
+</body>
+</html>

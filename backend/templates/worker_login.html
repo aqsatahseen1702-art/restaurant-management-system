@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worker Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='worker_login.css') }}">
+</head>
+
+<body>
+
+<div class="login-container">
+    <div class="login-box">
+
+        <h1>👨‍🍳 Worker Login</h1>
+        <p>Access your dashboard</p>
+
+        <input type="text" id="name" placeholder="Enter your name">
+
+        <button onclick="login()">Login</button>
+
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='worker_login.js') }}"></script>
+
+</body>
+</html>

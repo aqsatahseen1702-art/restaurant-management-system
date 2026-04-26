@@ -1,0 +1,140 @@
+/* ================== GLOBAL ================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkWAKB_3ZorIwNjmRhKnNaLVC_7OL_v4rlvA&s') no-repeat center center/cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================== CONTAINER ================== */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* ================== LOGIN BOX ================== */
+.login-box {
+    width: 320px;
+    padding: 40px;
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+/* ================== TEXT ================== */
+.login-box h1 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    margin-bottom: 20px;
+    color: #f1f1f1;
+}
+
+/* ================== FLOATING INPUT ================== */
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* Label */
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    color: #ddd;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Animation */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -8px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* ================== SELECT ================== */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* ================== BUTTON ================== */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    color: white;
+    background: linear-gradient(135deg, #5e5ad9, #6b6bf5);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff6a4a, #fda763);
+}
+
+/* ================== ERROR ================== */
+.error {
+    color: #ff6b6b;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.menu-item {
+    background: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;

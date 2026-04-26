@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: url('https://images.unsplash.com/photo-1555992336-03a23c7b20ee') no-repeat center/cover;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CONTAINER */
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* GLASS CARD */
+.login-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+
+    border-radius: 8px;
+    border: none;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: #eee;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #ff4d4d, #ff884d);
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}

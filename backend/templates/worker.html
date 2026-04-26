@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Worker Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #111827;
+            color: white;
+        }
+
+        .logout-btn {
+            background: #ef4444;
+            border: none;
+            padding: 8px 15px;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background: #dc2626;
+        }
+
+        .worker-container {
+            padding: 20px;
+        }
+
+        .orders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .order-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pending { border-left: 5px solid red; }
+        .preparing { border-left: 5px solid orange; }
+        .ready { border-left: 5px solid green; }
+
+        .order-card select,
+        .order-card input {
+            width: 100%;
+            margin-top: 8px;
+            padding: 6px;
+        }
+
+        .order-card button {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-card button:hover {
+            background: #2563eb;
+        }
+    </style>
+
+    <script src="{{ url_for('static', filename='worker.js') }}" defer></script>
+
+    <script>
+        function logout() {
+            localStorage.removeItem("worker_id");
+            window.location.href = "/";  // back to main login
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <h2>👨‍🍳 Worker Dashboard</h2>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <div class="worker-container">
+        <h1>📋 Incoming Orders</h1>
+        <div id="orders-container" class="orders-grid"></div>
+    </div>
+
+</body>
+</html>

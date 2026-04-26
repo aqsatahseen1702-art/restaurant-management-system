@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    background: #f5f5f5;
+}
+
+.container {
+    padding: 20px;
+}
+
+.order-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    padding: 6px 10px;
+    margin: 5px;
+    border: none;
+    background: #ff4d4d;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+select, input {
+    margin-top: 5px;
+    padding: 5px;
+}
